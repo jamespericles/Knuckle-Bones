@@ -1,0 +1,13 @@
+{
+  "extends": "@tsconfig/react-native/tsconfig.json",
+  "compilerOptions": {
+    "jsx": "react-native",
+    "module": "ESNext",
+    "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      "*": ["./*"],
+      "@lib/*": ["./lib/*"],
+    },
+  },
+}
