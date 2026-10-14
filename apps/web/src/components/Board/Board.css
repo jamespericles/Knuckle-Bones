@@ -57,3 +57,16 @@
 .score--emphasis {
   color: var(--gold);
 }
+
+@media (max-height: 720px) {
+  .board {
+    padding: 6px 10px 8px;
+    gap: 2px;
+  }
+  .board__name {
+    font-size: 1.1rem;
+  }
+  .score {
+    font-size: 1.4rem;
+  }
+}

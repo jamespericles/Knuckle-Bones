@@ -76,3 +76,14 @@
   color: var(--ink-dim);
   font-size: 0.9rem;
 }
+
+@media (max-height: 720px) {
+  .banner {
+    min-height: 0;
+    padding: 6px 10px;
+  }
+  .tray {
+    padding: 8px 12px;
+    min-height: 0;
+  }
+}

@@ -46,3 +46,12 @@
   --dur-shatter: 450ms;
   --dur-count: 400ms;
 }
+
+/* short phones (iPhone SE class): smaller dice and tighter gaps so the tray stays on screen */
+@media (max-height: 720px) {
+  :root {
+    --die: clamp(40px, 11.5vw, 72px);
+    --gap-slot: 5px;
+    --gap-col: 8px;
+  }
+}

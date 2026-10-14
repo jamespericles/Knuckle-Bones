@@ -19,7 +19,7 @@ export function GameTop({ title, onRules, children }: GameTopProps) {
         </Button>
         <h1 className="game__title">{title}</h1>
         <Button variant="ghost" small onClick={onRules} ariaLabel="How to play">
-          ?
+          Rules
         </Button>
       </div>
       {children}
