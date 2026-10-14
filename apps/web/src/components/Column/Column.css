@@ -1,0 +1,89 @@
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 6px;
+  border: 0;
+  border-radius: var(--radius-md);
+  background: transparent;
+  color: var(--ink-dim);
+  transition:
+    background-color var(--dur-fast),
+    box-shadow var(--dur-fast);
+}
+
+.column__slots {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: var(--gap-slot);
+}
+
+.column--flipped .column__slots {
+  flex-direction: column;
+}
+
+/* the opponent's score sits above their dice */
+.column--flipped {
+  flex-direction: column-reverse;
+}
+
+.column__slot {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: var(--die);
+  height: var(--die);
+  border-radius: 22%;
+}
+
+.column__slot--empty {
+  background: var(--bg-2);
+  box-shadow: inset 0 2px 6px rgb(0 0 0 / 0.6);
+}
+
+.column__score {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  line-height: 1;
+  min-height: 1em;
+}
+
+.column--open {
+  cursor: pointer;
+  box-shadow: 0 0 0 1px rgb(216 169 74 / 0.35);
+}
+
+.column--open:hover,
+.column--open:focus-visible {
+  background: rgb(216 169 74 / 0.08);
+}
+
+.column--open:hover .column__preview,
+.column--open:focus-visible .column__preview {
+  opacity: 0.4;
+}
+
+.column--open:active {
+  transform: translateY(1px);
+}
+
+.column:disabled {
+  cursor: default;
+}
+
+.column--highlight {
+  background: rgb(224 50 63 / 0.1);
+  box-shadow: 0 0 0 1px rgb(224 50 63 / 0.5);
+}
+
+.column--hit {
+  animation: column-hit var(--dur-shatter) ease-out both;
+}
+
+/* the preview sits in the slot behind nothing; keep it from catching taps */
+.column__preview {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}

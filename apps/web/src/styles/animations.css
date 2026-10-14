@@ -1,0 +1,78 @@
+@keyframes die-drop {
+  from {
+    transform: translateY(-40%) scale(1.15);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(4%) scale(0.97);
+    opacity: 1;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@keyframes die-shatter {
+  0% {
+    transform: none;
+    opacity: 1;
+  }
+  20% {
+    transform: translateX(-6%) rotate(-6deg);
+  }
+  40% {
+    transform: translateX(6%) rotate(6deg);
+  }
+  60% {
+    transform: translateX(-4%) rotate(-3deg);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(0.6) rotate(0deg);
+    opacity: 0;
+  }
+}
+
+@keyframes column-hit {
+  0% {
+    box-shadow: 0 0 0 0 var(--accent-glow);
+  }
+  50% {
+    box-shadow: 0 0 0 6px var(--accent-glow);
+  }
+  100% {
+    box-shadow: 0 0 0 0 transparent;
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.45;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+  }
+}

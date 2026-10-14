@@ -1,0 +1,48 @@
+:root {
+  color-scheme: dark;
+
+  /* surfaces */
+  --bg-0: #0b0a0f;
+  --bg-1: #16131d;
+  --bg-2: #211c2b;
+  --bg-3: #2c2538;
+
+  /* text */
+  --ink: #ece4d2;
+  --ink-dim: #a99f8d;
+  --ink-faint: #6f675c;
+
+  /* dice */
+  --bone: #e9dfc7;
+  --bone-dark: #c9bb9c;
+  --bone-light: #f7f1e3;
+  --pip: #1a1218;
+
+  /* accents */
+  --accent: #b3122c;
+  --accent-2: #e0323f;
+  --accent-glow: rgb(224 50 63 / 0.45);
+  --gold: #d8a94a;
+  --gold-glow: rgb(216 169 74 / 0.55);
+
+  /* shape */
+  --radius-lg: 20px;
+  --radius-md: 12px;
+  --radius-sm: 8px;
+  --shadow: 0 8px 24px rgb(0 0 0 / 0.5);
+
+  /* type */
+  --font-display: 'Grenze Gotisch Variable', Georgia, serif;
+  --font-body: 'Alegreya Sans', system-ui, -apple-system, sans-serif;
+
+  /* sizing */
+  --die: clamp(44px, 13vw, 72px);
+  --gap-slot: 6px;
+  --gap-col: 10px;
+
+  /* motion */
+  --dur-fast: 150ms;
+  --dur-drop: 350ms;
+  --dur-shatter: 450ms;
+  --dur-count: 400ms;
+}
