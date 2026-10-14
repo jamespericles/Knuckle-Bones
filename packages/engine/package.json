@@ -1,0 +1,24 @@
+{
+  "name": "@knucklebones/engine",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./src/index.ts"
+    }
+  },
+  "sideEffects": false,
+  "scripts": {
+    "test": "vitest run --coverage",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "devDependencies": {
+    "vitest": "^5.0.4",
+    "@vitest/coverage-v8": "^5.0.4"
+  }
+}
